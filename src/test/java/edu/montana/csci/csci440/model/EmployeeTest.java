@@ -21,7 +21,7 @@ public class EmployeeTest extends DBTest {
 
     @Test
     void testPagingWorks() {
-        assertEquals(2, Employee.all(0, 2).size());
+        assertEquals(2, Employee.all(1, 2).size());
         assertEquals(2, Employee.all(2, 2).size());
         assertEquals(2, Employee.all(3, 2).size());
         assertEquals(2, Employee.all(4, 2).size());

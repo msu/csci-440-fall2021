@@ -24,8 +24,8 @@ public class InvoicesTest extends DBTest {
 
     @Test
     void testPagingWorks() {
-        assertEquals(5, Invoice.all(0, 5).size());
-        assertEquals(100, Invoice.all(0, 100).size());
+        assertEquals(5, Invoice.all(1, 5).size());
+        assertEquals(100, Invoice.all(1, 100).size());
         assertEquals(100, Invoice.all(2, 100).size());
         assertEquals(100, Invoice.all(3, 100).size());
         assertEquals(100, Invoice.all(4, 100).size());

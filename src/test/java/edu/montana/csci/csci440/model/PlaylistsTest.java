@@ -25,7 +25,7 @@ public class PlaylistsTest extends DBTest {
 
     @Test
     void testPagingWorks() {
-        assertEquals(5, Playlist.all(0, 5).size());
+        assertEquals(5, Playlist.all(1, 5).size());
         assertEquals(10, Playlist.all(1, 10).size());
         assertEquals(8, Playlist.all(2, 10).size());
         assertEquals(0, Playlist.all(42, 10).size());
