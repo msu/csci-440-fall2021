@@ -37,11 +37,12 @@ public class Homework3 extends DBTest {
             subtract.setLong(1, 0);
             subtract.setLong(2, 0);
             subtract.execute();
-
+            
+            // This was set to substract and it should be add maybe??
             PreparedStatement add = connection.prepareStatement("TODO");
-            subtract.setLong(1, 0);
-            subtract.setLong(2, 0);
-            subtract.execute();
+            add.setLong(1, 0);
+            add.setLong(2, 0);
+            add.execute();
 
             // commit with the connection
         }
@@ -81,6 +82,10 @@ public class Homework3 extends DBTest {
      * who have purchased something from the 'Rock' Genre
      *
      * Please use an IN clause and a sub-select to generate customer IDs satisfying the criteria
+     * ----THIS TEST CAN BE PASSED WITH A MUCH SIMPLER QUERY 
+     * SELECT Email FROM customers WHERE SupportRepId = 3
+     * Maybe another employee has a better test in the database?
+     * ----
      * */
     public void selectCustomersMeetingCriteria() throws SQLException {
         // HINT: join to invoice items and do a group by/having to get the right answer
